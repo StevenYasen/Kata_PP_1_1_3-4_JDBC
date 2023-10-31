@@ -14,8 +14,6 @@ public class Util {
 
         try {
             connection = DriverManager.getConnection(URL, USR, PSW);
-            System.out.println("Connection is opened");
-
         } catch (SQLException e) {
             System.out.println("Connection is NOT opened");
         }
