@@ -33,7 +33,7 @@ public class UserDaoJDBCImpl implements UserDao {
              Statement statement = connection.createStatement()) {
             statement.executeUpdate("DROP TABLE `mydbtest`.`users`;");
         } catch (SQLException e) {
-            System.out.println("Was unable to drop table users\n");
+            System.out.println("Was unable to drop table users");
         }
     }
 
@@ -71,7 +71,7 @@ public class UserDaoJDBCImpl implements UserDao {
             }
             return list;
         } catch (SQLException e) {
-            System.out.printf("Could get all users from table users\n");
+            System.out.println("Could get all users from table users");
         }
         return null;
     }
@@ -81,7 +81,7 @@ public class UserDaoJDBCImpl implements UserDao {
              PreparedStatement statement = connection.prepareStatement("delete from users;")) {
             statement.executeUpdate();
         } catch (SQLException e) {
-            System.out.printf("Could not delete all users from table users\n");
+            System.out.println("Could not delete all users from table users");
         }
     }
 }
